@@ -1,0 +1,11 @@
+# Site settings
+title: Hyper Pictogram
+email: hidetoi@gmail.com
+description: Pictograms are now machine-readable.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://hyperpictogram.github.io" # the base hostname & protocol for your site
+twitter_username: tourinfojp
+github_username:  hyperpictogram
+
+# Build settings
+markdown: kramdown
