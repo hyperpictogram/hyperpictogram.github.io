@@ -246,8 +246,10 @@
         margin-bottom: $spacing-unit;
         @extend %clearfix;
 
-        > img {
-            float: left;
+        > a {
+            > img {
+                float: left;
+            }
         }
     }
 }

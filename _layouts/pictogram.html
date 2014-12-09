@@ -9,8 +9,14 @@ layout: default
   </header>
 
   <article class="post-content">
-  	<img src="{{page.url | replace:'.html','.png' }}" alt="{{ page.name }}"/>
+  	<img src="{{ page.url | replace:'.html','.png' }}" alt="{{ page.name }}"/>
     {{ content }}
+
+    <section id="code">
+    	<h2>Code</h2>
+    	{% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url }}"><img src="{{ site.url }}{{ page.url | replace:'.html','.png' }}" alt="{{ page.name }}"></a>
+    	{% endhighlight %}
+    </section>
   </article>
 
 </div>
