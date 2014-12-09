@@ -1,5 +1,5 @@
 /**
- * Pictograms
+ * index page
  */
 .pictogram-list {
     margin-left: 0;
@@ -16,5 +16,28 @@
                 margin-right: $spacing-unit;
             }
         }
+    }
+}
+
+/**
+ * Pictogram page
+ */
+.pictogram {
+    // English is the default language.
+    .pictogram-m17n:not([lang="en"]) {
+        display: none;
+    }
+}
+
+/**
+ * Language Selector
+ */
+.pictogram-language-selector {
+    button {
+        font-size: $base-font-size * 0.80;
+        border-style: 1px solid;
+        border-radius: 5px;
+        height: 40px;
+        cursor: pointer;
     }
 }
