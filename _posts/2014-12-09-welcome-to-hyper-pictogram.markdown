@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Welcome to Hyper Pictogram!!"
-date:   2014-12-09 18:40:00
 categories: about
 ---
 
