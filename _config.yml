@@ -9,3 +9,8 @@ github_username:  hyperpictogram
 
 # Build settings
 markdown: kramdown
+
+# Collections
+collections:
+  pictograms:
+    output: true

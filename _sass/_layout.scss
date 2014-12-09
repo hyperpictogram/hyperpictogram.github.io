@@ -234,3 +234,20 @@
         }
     }
 }
+
+/**
+ * Pictograms
+ */
+.pictogram-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+        @extend %clearfix;
+
+        > img {
+            float: left;
+        }
+    }
+}

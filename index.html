@@ -4,6 +4,18 @@ layout: default
 
 <div class="home">
 
+  <h1 class="page-heading">Pictograms</h1>
+
+  <ul class="pictogram-list">
+    {% for pictogram in site.pictograms limit:3 %}
+      <li>
+        <img src="{{pictogram.url | replace:'.html','.png' }}" alt="{{ pictogram.name }}"/>
+        <h2><a href="{{ pictogram.url }}">{{ pictogram.name }}</a></h2>
+        <p>{{ pictogram.short-description }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
