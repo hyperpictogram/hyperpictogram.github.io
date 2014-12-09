@@ -9,14 +9,46 @@ layout: default
   </header>
 
   <article class="post-content">
-  	<img src="{{ page.url | replace:'.html','.png' }}" alt="{{ page.name }}"/>
-    {{ content }}
+  	<section id="image">
+  		<img src="{{ page.image-file }}" alt="{{ page.name }}"/>
+  	</section>
+
+  	<section id="description">
+  		<h2>Description</h2>
+    	<div>{{ content }}</div>
+	</section>
+
+	{% if page.author %}
+	  	<section id="author">
+	  		<h2>Author</h2>
+	    	<div>{{ page.author }}</div>
+		</section>
+	{% endif %}
+
+	{% if page.permission %}
+	  	<section id="permission">
+	  		<h2>Permission</h2>
+	    	<div>{{ page.permission }}</div>
+		</section>
+	{% endif %}
+
+	{% if page.source %}
+		<section id="source">
+			<h2>Source</h2>
+			{% if page.source-url %}
+				<a href="{{ page.source-url }}">{{ page.source }}</a>
+			{% else %}
+				{{ page.source }}
+			{% endif %}
+		</section>
+	{% endif %}
 
     <section id="code">
     	<h2>Code</h2>
-    	{% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url }}"><img src="{{ site.url }}{{ page.url | replace:'.html','.png' }}" alt="{{ page.name }}"></a>
+    	{% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image-file }}" alt="{{ page.name }}"></a>
     	{% endhighlight %}
     </section>
+
   </article>
 
 </div>

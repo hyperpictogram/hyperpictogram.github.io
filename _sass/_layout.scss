@@ -249,6 +249,8 @@
         > a {
             > img {
                 float: left;
+                width: 100px;
+                margin-right: $spacing-unit;
             }
         }
     }
