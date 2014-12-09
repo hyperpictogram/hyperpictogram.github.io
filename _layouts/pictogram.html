@@ -25,13 +25,6 @@ layout: default
 		</section>
 	{% endif %}
 
-	{% if page.permission %}
-	  	<section id="permission">
-	  		<h2>Permission</h2>
-	    	<div>{{ page.permission }}</div>
-		</section>
-	{% endif %}
-
 	{% if page.source %}
 		<section id="source">
 			<h2>Source</h2>
@@ -40,6 +33,13 @@ layout: default
 			{% else %}
 				{{ page.source }}
 			{% endif %}
+		</section>
+	{% endif %}
+
+	{% if page.permission %}
+	  	<section id="permission">
+	  		<h2>Permission</h2>
+	    	<div>{{ page.permission }}</div>
 		</section>
 	{% endif %}
 
