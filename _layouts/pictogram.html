@@ -23,7 +23,7 @@ labels:
     en: Code
     ja: コード
 ---
-<div class="pictogram">
+<div class="pictogram" vocab="{{ site.url }}/ns#">
 
   <nav>
     <div id="pictogram-language-selector">
@@ -38,23 +38,23 @@ labels:
 
   {% for lang in page.languages %}
     <header class="pictogram-m17n pictogram-header" lang="{{ lang }}">
-      <h1 class="pictogram-name">{{ page.name[lang] }}</h1>
-      <p class="pictogram-meta">{{ page.short_description[lang] }}</p>
+      <h1 property="name" class="pictogram-name">{{ page.name[lang] }}</h1>
+      <p property="shortDescription" class="pictogram-short-description">{{ page.short_description[lang] }}</p>
     </header>
   {% endfor %}
 
   <article class="pictogram-content">
-    <section id="image">
-      <img src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
+    <section id="pictogram-image-file">
+      <img property="imageFile" src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
     </section>
 
     {% if page.long_description %}
       {% for long_description in page.long_description %}
         {% assign lang = long_description[0] %}
         {% assign label = long_description[1] %}
-        <section class="pictogram-m17n pictogram-long_description" lang="{{ lang }}">
+        <section class="pictogram-m17n pictogram-long-description" lang="{{ lang }}">
           <h2>{{ layout.labels.long_description[lang] }}</h2>
-          <div>{{ page.long_description[lang] | markdownify }}</div>
+          <div property="longDescription">{{ page.long_description[lang] | markdownify }}</div>
         </section>
       {% endfor %}
     {% endif %}
@@ -65,7 +65,7 @@ labels:
         {% assign label = author[1] %}
         <section class="pictogram-m17n pictogram-author" lang="{{ lang }}">
           <h2>{{ layout.labels.author[lang] }}</h2>
-          <div>{{ page.author[lang] | markdownify }}</div>
+          <div property="author">{{ page.author[lang] | markdownify }}</div>
         </section>
       {% endfor %}
     {% endif %}
@@ -77,9 +77,9 @@ labels:
         <section class="pictogram-m17n pictogram-source" lang="{{ lang }}">
           <h2>{{ layout.labels.source[lang] }}</h2>
           {% if page.source_url %}
-            <a href="{{ page.source_url }}">{{ page.source[lang] | markdownify }}</a>
+            <a property="sourceUrl" href="{{ page.source_url }}"><span property="source">{{ page.source[lang] | markdownify }}</span></a>
           {% else %}
-            {{ page.source[lang] | markdownify }}
+            <span property="source">{{ page.source[lang] | markdownify }}</span>
           {% endif %}
         </section>
       {% endfor %}
@@ -91,7 +91,7 @@ labels:
         {% assign label = permission[1] %}
         <section class="pictogram-m17n pictogram-permission" lang="{{ lang }}">
           <h2>{{ layout.labels.permission[lang] }}</h2>
-          <div>{{ page.permission[lang] | markdownify }}</div>
+          <div property="permission">{{ page.permission[lang] | markdownify }}</div>
         </section>
       {% endfor %}
     {% endif %}
