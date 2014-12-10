@@ -23,21 +23,18 @@
  * Pictogram page
  */
 .pictogram {
-    // English is the default language.
-    .pictogram-m17n:not([lang="en"]) {
+    #pictogram-language-selector {
         display: none;
-    }
-}
-
-/**
- * Language Selector
- */
-.pictogram-language-selector {
-    button {
-        font-size: $base-font-size * 0.80;
-        border-style: 1px solid;
-        border-radius: 5px;
-        height: 40px;
-        cursor: pointer;
+        > .pictogram-m17n-switch {
+            font-size: $base-font-size * 0.80;
+            background-color: $background-color;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 40px;
+            cursor: pointer;
+        }
+        > .pictogram-m17n-switch.selected {
+                background-color: $grey-color;
+        }
     }
 }
