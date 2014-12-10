@@ -6,6 +6,12 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
+    {% if page.layout == "pictogram" %}
+        <meta property="og:image" content="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}">
+    {% else %}
+        <meta property="og:image" content="{{ site.url }}/hyper_pictogram_logo.svg">
+    {% endif %}
+
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
