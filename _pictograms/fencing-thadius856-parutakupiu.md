@@ -24,4 +24,11 @@ source_url: http://commons.wikimedia.org/wiki/File:Fencing_pictogram.svg
 permission:
   en: Public domain
   ja: パブリック・ドメイン
+links:
+  -
+    - rdf:type
+    - http://www.bbc.co.uk/ontologies/sport/SportsDiscipline
+  -
+    - owl:sameAs
+    - http://dbpedia.org/resource/Fencing
 ---

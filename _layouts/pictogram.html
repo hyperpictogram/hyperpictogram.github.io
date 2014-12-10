@@ -22,6 +22,9 @@ labels:
   code:
     en: Code
     ja: コード
+  links:
+    en: RDF Links
+    ja: RDFリンク
 ---
 <div class="pictogram" vocab="{{ site.url }}/ns#">
 
@@ -102,6 +105,27 @@ labels:
       {% endfor %}
       {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
+    </section>
+
+    <section id="links">
+      {% for lang in page.languages %}
+        <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.links[lang] }}</h2>
+      {% endfor %}
+      <table>
+        <thead>
+          <caption>RDF triples with the implicit subject</caption>
+          <tr>
+            <th scope="col">predicate</th>
+            <th scope="col">object</th>
+          </tr>
+        </thead>
+        {% for link in page.links %}
+          <tr>
+            <td>{{ link[0] }}</td>
+            <td><a href="{{ link[1] }}">{{ link[1] }}</a></td>
+          </tr>
+        {% endfor %}
+      </table>
     </section>
   </article>
 </div>
