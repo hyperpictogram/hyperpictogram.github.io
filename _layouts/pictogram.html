@@ -19,6 +19,9 @@ labels:
   source:
     en: Source
     ja: 情報源
+  code:
+    en: Code
+    ja: コード
 ---
 <div class="pictogram">
 
@@ -97,7 +100,9 @@ labels:
     {% endif %}
 
     <section id="code">
-      <h2>Code</h2>
+      {% for lang in page.languages %}
+        <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.code[lang] }}</h2>
+      {% endfor %}
       {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
     </section>
