@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="pictogram-index">
+
+  <h1 class="page-heading">Pictograms</h1>
+
+  <ul class="pictogram-list">
+    {% for pictogram in site.pictograms %}
+      <li>
+        <a href="{{ pictogram.url | remove:'index.html' }}">
+          <img src="{{ pictogram.url | remove:'index.html' }}{{ pictogram.image_file }}" alt="{{ pictogram.name.en }}">
+          <h2>{{ pictogram.name.en }}</h2>
+          <p>{{ pictogram.short_description.en }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
