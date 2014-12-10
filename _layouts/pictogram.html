@@ -52,9 +52,7 @@ labels:
     </section>
 
     {% if page.long_description %}
-      {% for long_description in page.long_description %}
-        {% assign lang = long_description[0] %}
-        {% assign label = long_description[1] %}
+      {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-long-description" lang="{{ lang }}">
           <h2>{{ layout.labels.long_description[lang] }}</h2>
           <div property="longDescription">{{ page.long_description[lang] | markdownify }}</div>
@@ -63,9 +61,7 @@ labels:
     {% endif %}
 
     {% if page.author %}
-      {% for author in page.author %}
-        {% assign lang = author[0] %}
-        {% assign label = author[1] %}
+      {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-author" lang="{{ lang }}">
           <h2>{{ layout.labels.author[lang] }}</h2>
           <div property="author">{{ page.author[lang] | markdownify }}</div>
@@ -74,9 +70,7 @@ labels:
     {% endif %}
 
     {% if page.source %}
-      {% for source in page.source %}
-        {% assign lang = source[0] %}
-        {% assign label = source[1] %}
+      {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-source" lang="{{ lang }}">
           <h2>{{ layout.labels.source[lang] }}</h2>
           {% if page.source_url %}
@@ -89,9 +83,7 @@ labels:
     {% endif %}
 
     {% if page.permission %}
-      {% for permission in page.permission %}
-        {% assign lang = permission[0] %}
-        {% assign label = permission[1] %}
+      {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-permission" lang="{{ lang }}">
           <h2>{{ layout.labels.permission[lang] }}</h2>
           <div property="permission">{{ page.permission[lang] | markdownify }}</div>
