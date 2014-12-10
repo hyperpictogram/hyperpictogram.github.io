@@ -36,22 +36,22 @@ labels:
   {% for lang in page.languages %}
     <header class="pictogram-m17n pictogram-header" lang="{{ lang }}">
       <h1 class="pictogram-name">{{ page.name[lang] }}</h1>
-      <p class="pictogram-meta">{{ page.short-description[lang] }}</p>
+      <p class="pictogram-meta">{{ page.short_description[lang] }}</p>
     </header>
   {% endfor %}
 
   <article class="pictogram-content">
     <section id="image">
-      <img src="{{ page.image-file }}" alt="{{ page.name.en }}"/>
+      <img src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
     </section>
 
-    {% if page.description %}
-      {% for description in page.description %}
-        {% assign lang = description[0] %}
-        {% assign label = description[1] %}
-        <section class="pictogram-m17n pictogram-description" lang="{{ lang }}">
-          <h2>{{ layout.labels.description[lang] }}</h2>
-          <div>{{ page.description[lang] | markdownify }}</div>
+    {% if page.long_description %}
+      {% for long_description in page.long_description %}
+        {% assign lang = long_description[0] %}
+        {% assign label = long_description[1] %}
+        <section class="pictogram-m17n pictogram-long_description" lang="{{ lang }}">
+          <h2>{{ layout.labels.long_description[lang] }}</h2>
+          <div>{{ page.long_description[lang] | markdownify }}</div>
         </section>
       {% endfor %}
     {% endif %}
@@ -73,8 +73,8 @@ labels:
         {% assign label = source[1] %}
         <section class="pictogram-m17n pictogram-source" lang="{{ lang }}">
           <h2>{{ layout.labels.source[lang] }}</h2>
-          {% if page.source-url %}
-            <a href="{{ page.source-url }}">{{ page.source[lang] | markdownify }}</a>
+          {% if page.source_url %}
+            <a href="{{ page.source_url }}">{{ page.source[lang] | markdownify }}</a>
           {% else %}
             {{ page.source[lang] | markdownify }}
           {% endif %}
@@ -98,7 +98,7 @@ labels:
 
     <section id="code">
       <h2>Code</h2>
-      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image-file }}" alt="{{ page.name.en }}"></a>
+      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
     </section>
   </article>
