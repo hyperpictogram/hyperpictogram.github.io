@@ -55,9 +55,7 @@ labels:
   {% endfor %}
 
   <article class="pictogram-content">
-    <section id="pictogram-image-file">
-      <img property="imageFile" src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
-    </section>
+    <img class="pictogram-image" property="image" src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
 
     {% if page.long_description %}
       {% for lang in page.languages %}

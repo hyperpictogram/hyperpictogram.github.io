@@ -8,9 +8,9 @@ layout: default
 
   <ul class="pictogram-list">
     {% for pictogram in site.pictograms limit:3 %}
-      <li>
+      <li class="pictogram">
         <a href="{{ pictogram.url | remove:'index.html' }}">
-          <img src="{{ pictogram.url | remove:'index.html' }}{{ pictogram.image_file }}" alt="{{ pictogram.name.en }}">
+          <img class="pictogram-image" src="{{ pictogram.url | remove:'index.html' }}{{ pictogram.image_file }}" alt="{{ pictogram.name.en }}">
           <h2>{{ pictogram.name.en }}</h2>
           <p>{{ pictogram.short_description.en }}</p>
         </a>
