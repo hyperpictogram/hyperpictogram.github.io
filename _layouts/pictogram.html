@@ -60,7 +60,7 @@ labels:
     {% if page.long_description %}
       {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-long-description" lang="{{ lang }}">
-          <h2>{{ layout.labels.long_description[lang] }}</h2>
+          <h2>{{ layout.labels.description[lang] }}</h2>
           <div property="longDescription">{{ page.long_description[lang] | markdownify }}</div>
         </section>
       {% endfor %}
