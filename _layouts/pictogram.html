@@ -35,6 +35,8 @@ labels:
     en: Source on GitHub
     ja: GitHubのソース
 ---
+{% capture permalink %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+
 <div class="pictogram" vocab="{{ site.url }}/ns#">
 
   <nav>
@@ -105,7 +107,7 @@ labels:
         <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.code[lang] }}</h2>
         <p class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.codeUsage[lang] }}</p>
       {% endfor %}
-      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
+      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ permalink }}"><img src="{{ permalink }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
     </section>
 
