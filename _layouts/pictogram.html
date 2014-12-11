@@ -22,6 +22,9 @@ labels:
   code:
     en: Code
     ja: コード
+  codeUsage:
+    en: Copy and paste this code into your webpage.
+    ja: このコードをコピーアンドペーストしてください。
   links:
     en: RDF Links
     ja: RDFリンク
@@ -100,6 +103,7 @@ labels:
     <section id="code">
       {% for lang in page.languages %}
         <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.code[lang] }}</h2>
+        <p class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.codeUsage[lang] }}</p>
       {% endfor %}
       {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ site.url }}{{ page.url | remove:'index.html' }}"><img src="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
