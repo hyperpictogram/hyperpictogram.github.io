@@ -131,7 +131,7 @@ var languageSelector = document.getElementById("pictogram-language-selector")
 languageSelector.style.display = "block"
 
 // display the default language
-var language = window.navigator.userLanguage || window.navigator.language
+var language = window.navigator.userLanguage || window.navigator.language || "en-US"
 if (language) {
   var lang = language.substr(0,2)
   switchLanguage(lang)
