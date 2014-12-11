@@ -25,9 +25,6 @@ labels:
   codeUsage:
     en: Copy and paste this code into your webpage.
     ja: このコードをコピーアンドペーストしてください。
-  links:
-    en: RDF Links
-    ja: RDFリンク
   rawData:
     en: Raw Data
     ja: 生データ
@@ -112,24 +109,10 @@ labels:
     </section>
 
     <section id="links">
-      {% for lang in page.languages %}
-        <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.links[lang] }}</h2>
-      {% endfor %}
-      <table>
-        <thead>
-          <caption>RDF triples with the implicit subject</caption>
-          <tr>
-            <th scope="col">predicate</th>
-            <th scope="col">object</th>
-          </tr>
-        </thead>
-        {% for link in page.links %}
-          <tr>
-            <td>{{ link[0] }}</td>
-            <td><a href="{{ link[1] }}">{{ link[1] }}</a></td>
-          </tr>
-        {% endfor %}
-      </table>
+      <h2 lang="en">Linked Data (Turtle)</h2>
+<pre><code>&lt;<a href="{{ permalink }}">{{ permalink }}</a>&gt;
+{% for link in page.links %}  {{ link[0] }} &lt;<a property="{{ link[0]}}" href="{{ link[1] }}">{{ link[1] }}</a>&gt; {% if forloop.last %}.{% else %};{% endif %}
+{% endfor %}</code></pre>
     </section>
 
     <section id="raw_data">

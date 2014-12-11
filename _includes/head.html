@@ -14,9 +14,6 @@
     {% else %}
         <meta property="og:image" content="{{ site.url }}/hyper_pictogram_logo.svg">
     {% endif %}
-    {% for link in page.links %}
-        <meta property="{{ link[0] }}" content="{{ link[1] }}">
-    {% endfor %}
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
