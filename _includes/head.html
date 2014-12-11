@@ -10,7 +10,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.layout == "pictogram" %}
-        <meta property="og:image" content="{{ site.url }}{{ page.url | remove:'index.html' }}{{ page.image_file }}">
+        <meta property="og:image" content="{{ site.url }}{{ page.url | replace:'.html','.svg' }}">
     {% else %}
         <meta property="og:image" content="{{ site.url }}/hyper_pictogram_logo.svg">
     {% endif %}

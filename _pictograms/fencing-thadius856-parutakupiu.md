@@ -1,7 +1,6 @@
 ---
 title: Fencing
 description: Pictograms of Olympic sports - Fencing. This is unofficial sample picture. Images of official Olympic pictograms for 1948 Summer Olympics and all Summer Olympics since 1964 can be found in corresponding Official Reports.
-image_file: Fencing_pictogram.svg
 languages:
   - en
   - ja

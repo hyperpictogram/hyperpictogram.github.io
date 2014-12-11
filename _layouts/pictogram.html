@@ -32,7 +32,8 @@ labels:
     en: Source on GitHub
     ja: GitHubのソース
 ---
-{% capture permalink %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+{% capture permalinkOfPage %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+{% capture permalinkOfResource %}{{ permalinkOfPage | replace:'.html','' }}{% endcapture %}
 
 <div class="pictogram" vocab="{{ site.url }}/ns#">
 
@@ -55,7 +56,7 @@ labels:
   {% endfor %}
 
   <article class="pictogram-content">
-    <img class="pictogram-image" property="image" src="{{ page.image_file }}" alt="{{ page.name.en }}"/>
+    <img class="pictogram-image" property="image" src="{{ page.url | replace: '.html','.svg' }}" alt="{{ page.name.en }}"/>
 
     {% if page.long_description %}
       {% for lang in page.languages %}
@@ -102,13 +103,13 @@ labels:
         <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.code[lang] }}</h2>
         <p class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.codeUsage[lang] }}</p>
       {% endfor %}
-      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ permalink }}"><img src="{{ permalink }}{{ page.image_file }}" alt="{{ page.name.en }}"></a>
+      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ permalinkOfResource }}"><img src="{{ page.url | replace:'.html','.svg' | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
     </section>
 
     <section id="links">
       <h2 lang="en">Linked Data (Turtle)</h2>
-<pre><code>&lt;<a href="{{ permalink }}">{{ permalink }}</a>&gt;
+<pre><code>&lt;<a href="{{ permalinkOfResource }}">{{ permalinkOfResource }}</a>&gt;
 {% for link in page.links %}  {{ link[0] }} &lt;<a property="{{ link[0]}}" href="{{ link[1] }}">{{ link[1] }}</a>&gt; {% if forloop.last %}.{% else %};{% endif %}
 {% endfor %}</code></pre>
     </section>

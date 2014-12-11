@@ -3,7 +3,7 @@ title: Hyper Pictogram
 email: hidetoi@gmail.com
 description: The architecture of accessible pictograms for humanity and machinery.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://hyperpictogram.github.io" # the base hostname & protocol for your site
+url: "http://pictogram.tokyo" # the base hostname & protocol for your site
 twitter_username: tourinfojp
 github_username:  hyperpictogram
 
@@ -14,7 +14,7 @@ markdown: kramdown
 collections:
   pictograms:
     output: true
-    permalink: /pictograms/:name/
+    permalink: /pictograms/:name.html
 
 defaults:
   -
