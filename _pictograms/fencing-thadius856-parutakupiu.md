@@ -19,7 +19,7 @@ author:
 source:
   en: Wikimedia Commons
   ja: ウィキメディア・コモンズ
-source_url: http://commons.wikimedia.org/wiki/File:Fencing_pictogram.svg
+source_uri: http://commons.wikimedia.org/wiki/File:Fencing_pictogram.svg
 permission:
   en: Public domain
   ja: パブリック・ドメイン

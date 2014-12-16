@@ -35,7 +35,7 @@ labels:
 {% capture permalinkOfPage %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
 {% capture permalinkOfResource %}{{ permalinkOfPage | replace:'.html','' }}{% endcapture %}
 
-<div class="pictogram" vocab="{{ site.url }}/ns#">
+<div class="pictogram" vocab="{{ site.url }}/vocabulary#">
 
   <nav>
     <div id="pictogram-language-selector">
@@ -80,8 +80,8 @@ labels:
       {% for lang in page.languages %}
         <section class="pictogram-m17n pictogram-source" lang="{{ lang }}">
           <h2>{{ layout.labels.source[lang] }}</h2>
-          {% if page.source_url %}
-            <a property="sourceUrl" href="{{ page.source_url }}"><span property="source">{{ page.source[lang] | markdownify }}</span></a>
+          {% if page.source_uri %}
+            <a property="sourceURI" href="{{ page.source_uri }}"><span property="source">{{ page.source[lang] | markdownify }}</span></a>
           {% else %}
             <span property="source">{{ page.source[lang] | markdownify }}</span>
           {% endif %}
