@@ -103,7 +103,7 @@ labels:
         <h2 class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.code[lang] }}</h2>
         <p class="pictogram-m17n" lang="{{ lang }}">{{ layout.labels.codeUsage[lang] }}</p>
       {% endfor %}
-      {% highlight html %}<a property="{{ site.url }}/ns#pictogram" href="{{ permalinkOfResource }}"><img src="{{ page.url | replace:'.html','.svg' | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.name.en }}"></a>
+      {% highlight html %}<a property="{{ site.url }}/vocabulary#Pictogram" href="{{ permalinkOfResource }}"><img src="{{ page.url | replace:'.html','.svg' | prepend: site.baseurl | prepend: site.url }}" alt="{{ page.name.en }}"></a>
       {% endhighlight %}
     </section>
 
