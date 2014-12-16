@@ -108,9 +108,10 @@ labels:
 
     <section id="links">
       <h2 lang="en">Linked Data (Turtle)</h2>
-      <code resource="{{ permalinkOfResource }}">&lt;{{ permalinkOfResource }}&gt;<br>
-      {% for link in page.links %}&nbsp;&nbsp;{{ link[0] }} &lt;<a property="{{ link[0]}}" href="{{ link[1] }}">{{ link[1] }}</a>&gt;{% if forloop.last %}.{% else %};<br>{% endif %}
-      {% endfor %}</code>
+      <code resource="{{ permalinkOfResource }}"><pre>&lt;{{ permalinkOfResource }}&gt;
+  rdf:type &lt;http://pictogram.tokyo/vocabulary#Pictogram&gt;;
+{% for link in page.links %}  {{ link[0] }} &lt;<a property="{{ link[0]}}" href="{{ link[1] }}">{{ link[1] }}</a>&gt;{% if forloop.last %}.{% else %};{% endif %}
+{% endfor %}</pre></code>
     </section>
 
     <section id="raw_data">
