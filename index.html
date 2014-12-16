@@ -4,34 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading"><a href="/pictograms/">Pictograms</a></h1>
+  <h1>Prototyping Hyper Pictogram</h1>
+  
+  <p>This website is a prototype of Hyper Pictogram. Hyper Pictogram is the architecture of accessible pictograms for humanity and machinery. For more detail, see <a href="/about/">the About page</a>.</p>
+  
+  <p><a href="about/2014/12/11/the-basic-idea.html">The basic idea</a> is <em>to make every pictograms machine-readable</em> and <em>Linked Data</em>. This is the first prototype:</p>
+  
+  <div class="pictogram">
+    <a href="pictograms/fencing-thadius856-parutakupiu.html">
+      <img class="pictogram-image" src="pictograms/fencing-thadius856-parutakupiu.svg" alt="A pictogram of Fencing">
+    </a>
+  </div>
 
-  <ul class="pictogram-list">
-    {% for pictogram in site.pictograms limit:3 %}
-      <li class="pictogram">
-        <a href="{{ pictogram.url | remove:'index.html' }}">
-          <img class="pictogram-image" src="{{ pictogram.url | replace:'.html','.svg' }}" alt="{{ pictogram.name.en }}">
-          <h2>{{ pictogram.name.en }}</h2>
-          <p>{{ pictogram.short_description.en }}</p>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a> to follow the updates.</p>
 
 </div>
