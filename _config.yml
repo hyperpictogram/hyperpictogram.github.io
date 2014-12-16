@@ -5,7 +5,7 @@ description: The architecture of accessible pictograms for humanity and machiner
 baseurl: "" # the subpath of your site, e.g. /blog/
 destination: public
 url: "http://pictogram.tokyo" # the base hostname & protocol for your site
-twitter_username: tourinfojp
+twitter_username: HyperPictogram
 github_username:  hyperpictogram
 
 # Build settings
