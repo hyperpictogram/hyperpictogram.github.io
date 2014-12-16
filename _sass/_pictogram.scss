@@ -20,6 +20,22 @@
 }
 
 /**
+ * Vocabulary page
+ */
+.vocabulary {
+    dl {
+        dt {
+            margin: 1em 0;
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+        dd {
+            margin: 1em 0 2.5em 0;
+        }
+    }
+}
+
+/**
  * Pictogram page
  */
 .pictogram {
