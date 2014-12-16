@@ -11,6 +11,14 @@ dl, dd, ol, ul, figure {
 
 
 /**
+ * Default variables
+ */
+$spacing-unit: 1.5em;
+$base-line-height: 200%;
+
+
+
+/**
  * Basic styling
  */
 body {
@@ -32,8 +40,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-top: $spacing-unit / 2;
-    margin-bottom: $spacing-unit / 2;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
 }
 
 
