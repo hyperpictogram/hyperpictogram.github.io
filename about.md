@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+![The logo of Hyper Pictogram](/hyper_pictogram_logo.svg)
+
 Hyper Pictogram is the architecture of accessible pictograms for humanity and machinery.
 
 The architecture of Hyper Pictogram is as same as [Creative Commons]. Various licenses of Creative Commons have their own pictograms and RDF metadata definitions. Similarly, Hyper Pictograms have URIs and alternative RDFs.
