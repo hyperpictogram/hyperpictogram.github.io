@@ -25,7 +25,7 @@ permission:
   ja: パブリック・ドメイン
 links:
   -
-    - rdfs:subClassOf
+    - rdf:type
     - http://www.bbc.co.uk/ontologies/sport/SportsDiscipline
   -
     - owl:sameAs
