@@ -14,7 +14,7 @@
 
 
 <> a owl:Ontology;
-  dc:title "The Hyper Pictogram vocabulary"@en;
+  dc:title "The Hyper Pictogram Vocabulary"@en;
   dc:description "This is the vocabulary for Hyper Pictogram."@en;
   rdfs:seeAlso <http://pictogram.tokyo/>;
   rdfs:seeAlso <https://github.com/hyperpictogram/pictogram.tokyo>;
