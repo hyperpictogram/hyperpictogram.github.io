@@ -9,21 +9,85 @@
     <dc:description xml:lang="en">This is the vocabulary for Hyper Pictogram.</dc:description>
     <rdfs:seeAlso rdf:resource="http://pictogram.tokyo/"/>
     <rdfs:seeAlso rdf:resource="https://github.com/hyperpictogram/pictogram.tokyo"/>
-    <dc:hasFormat rdf:resource="http://pictogram.tokyo/vocabulary.ttl"/>
-    <dc:hasFormat rdf:resource="http://pictogram.tokyo/vocabulary.rdf"/>
-    <dc:license rdf:resource="http://pictogram.tokyo/terms.html"/>
+    <dc:hasFormat rdf:resource="http://pictogram.tokyo/.ttl"/>
+    <dc:hasFormat rdf:resource="http://pictogram.tokyo/.rdf"/>
+    <dc:license rdf:resource="http://pictogram.tokyo/terms"/>
   </owl:Ontology>
 
   <rdfs:Class rdf:about="http://pictogram.tokyo/vocabulary#Pictogram">
-    <rdfs:label>Pictogram</rdfs:label>
-    <rdfs:comment>the class of all pictograms</rdfs:comment>
+    <rdfs:label xml:lang="en">Pictogram</rdfs:label>
+    <rdfs:label xml:lang="ja">ピクトグラム</rdfs:label>
+    <rdfs:comment xml:lang="en">the class of pictograms</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムのクラス</rdfs:comment>
   </rdfs:Class>
 
-  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#source">
-    <rdfs:label>source</rdfs:label>
-    <rdfs:comment>a source of the pictogram</rdfs:comment>
+  <rdfs:Class rdf:about="http://pictogram.tokyo/vocabulary#Author">
+    <rdfs:label xml:lang="en">Author</rdfs:label>
+    <rdfs:label xml:lang="ja">作者</rdfs:label>
+    <rdfs:comment xml:lang="en">the class of authors of pictograms</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムの作者のクラス</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://pictogram.tokyo/vocabulary#Source">
+    <rdfs:label xml:lang="en">Source</rdfs:label>
+    <rdfs:label xml:lang="ja">情報源</rdfs:label>
+    <rdfs:comment xml:lang="en">the class of sources of pictograms</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムの情報源のクラス</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://pictogram.tokyo/vocabulary#License">
+    <rdfs:label xml:lang="en">License</rdfs:label>
+    <rdfs:label xml:lang="ja">ライセンス</rdfs:label>
+    <rdfs:comment xml:lang="en">the class of licenses of pictograms</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムのライセンスのクラス</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#title">
+    <rdfs:label xml:lang="en">title</rdfs:label>
+    <rdfs:label xml:lang="ja">タイトル</rdfs:label>
+    <rdfs:comment xml:lang="en">a title of a pictogram</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムのタイトル</rdfs:comment>
     <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#shortDescription">
+    <rdfs:label xml:lang="en">short description</rdfs:label>
+    <rdfs:label xml:lang="ja">短い説明文</rdfs:label>
+    <rdfs:comment xml:lang="en">a short description of a pictogram</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムの短い説明文</rdfs:comment>
+    <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#longDescription">
+    <rdfs:label xml:lang="en">long description</rdfs:label>
+    <rdfs:label xml:lang="ja">長い説明文</rdfs:label>
+    <rdfs:comment xml:lang="en">a long description of a pictogram</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ピクトグラムの長い説明文</rdfs:comment>
+    <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#author">
+    <rdfs:label xml:lang="en">author</rdfs:label>
+    <rdfs:comment xml:lang="en">an author of a pictogram</rdfs:comment>
+    <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
+    <rdfs:range rdf:resource="http://pictogram.tokyo/vocabulary#Author"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#source">
+    <rdfs:label xml:lang="en">source</rdfs:label>
+    <rdfs:comment xml:lang="en">a source of a pictogram</rdfs:comment>
+    <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
+    <rdfs:range rdf:resource="http://pictogram.tokyo/vocabulary#Source"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://pictogram.tokyo/vocabulary#license">
+    <rdfs:label xml:lang="en">license</rdfs:label>
+    <rdfs:comment xml:lang="en">a license of a pictogram</rdfs:comment>
+    <rdfs:domain rdf:resource="http://pictogram.tokyo/vocabulary#Pictogram"/>
+    <rdfs:range rdf:resource="http://pictogram.tokyo/vocabulary#License"/>
   </rdf:Property>
 
 </rdf:RDF>

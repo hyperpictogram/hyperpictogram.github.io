@@ -1,4 +1,5 @@
-#@prefix hp: <http://pictogram.tokyo/vocabulary#>.
+# Usage: @prefix hp: <http://pictogram.tokyo/vocabulary#>.
+
 @base <http://pictogram.tokyo/vocabulary>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -11,16 +12,72 @@
   dc:description "This is the vocabulary for Hyper Pictogram."@en;
   rdfs:seeAlso <http://pictogram.tokyo/>;
   rdfs:seeAlso <https://github.com/hyperpictogram/pictogram.tokyo>;
-  dc:hasFormat <http://pictogram.tokyo/vocabulary.ttl>;
-  dc:hasFormat <http://pictogram.tokyo/vocabulary.rdf>;
-  dc:license <http://pictogram.tokyo/terms.html>.
+  dc:hasFormat <.ttl>;
+  dc:hasFormat <.rdf>;
+  dc:license <http://pictogram.tokyo/terms>.
 
 <#Pictogram> a rdfs:Class;
-  rdfs:label "Pictogram";
-  rdfs:comment "the class of all pictograms".
+  rdfs:label "Pictogram"@en;
+  rdfs:label "ピクトグラム"@ja;
+  rdfs:comment "the class of pictograms"@en;
+  rdfs:comment "ピクトグラムのクラス"@ja.
 
-<#source> a rdf:Property;
-  rdfs:label "source";
-  rdfs:comment "a source of the pictogram";
+<#Author> a rdfs:Class;
+  rdfs:label "Author"@en;
+  rdfs:label "作者"@ja;
+  rdfs:comment "the class of authors of pictograms"@en;
+  rdfs:comment "ピクトグラムの作者のクラス"@ja.
+
+<#Source> a rdfs:Class;
+  rdfs:label "Source"@en;
+  rdfs:label "情報源"@ja;
+  rdfs:comment "the class of sources of pictograms"@en;
+  rdfs:comment "ピクトグラムの情報源のクラス"@ja.
+
+<#License> a rdfs:Class;
+  rdfs:label "License"@en;
+  rdfs:label "ライセンス"@ja;
+  rdfs:comment "the class of licenses of pictograms"@en;
+  rdfs:comment "ピクトグラムのライセンスのクラス"@ja.
+
+<#title> a rdf:Property;
+  rdfs:label "title"@en;
+  rdfs:label "タイトル"@ja;
+  rdfs:comment "a title of a pictogram"@en;
+  rdfs:comment "ピクトグラムのタイトル"@ja;
   rdfs:domain <#Pictogram>;
   rdfs:range rdfs:Literal.
+
+<#shortDescription> a rdf:Property;
+  rdfs:label "short description"@en;
+  rdfs:label "短い説明文"@ja;
+  rdfs:comment "a short description of a pictogram"@en;
+  rdfs:comment "ピクトグラムの短い説明文"@ja;
+  rdfs:domain <#Pictogram>;
+  rdfs:range rdfs:Literal.
+
+<#longDescription> a rdf:Property;
+  rdfs:label "long description"@en;
+  rdfs:label "長い説明文"@ja;
+  rdfs:comment "a long description of a pictogram"@en;
+  rdfs:comment "ピクトグラムの長い説明文"@ja;
+  rdfs:domain <#Pictogram>;
+  rdfs:range rdfs:Literal.
+
+<#author> a rdf:Property;
+  rdfs:label "author"@en;
+  rdfs:comment "an author of a pictogram"@en;
+  rdfs:domain <#Pictogram>;
+  rdfs:range <#Author>.
+
+<#source> a rdf:Property;
+  rdfs:label "source"@en;
+  rdfs:comment "a source of a pictogram"@en;
+  rdfs:domain <#Pictogram>;
+  rdfs:range <#Source>.
+
+<#license> a rdf:Property;
+  rdfs:label "license"@en;
+  rdfs:comment "a license of a pictogram"@en;
+  rdfs:domain <#Pictogram>;
+  rdfs:range <#License>.
